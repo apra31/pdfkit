@@ -133,6 +133,7 @@ class PDFKit
     # Some of the codes: https://code.google.com/p/wkhtmltopdf/issues/detail?id=1088
     # returned when assets are missing (404): https://code.google.com/p/wkhtmltopdf/issues/detail?id=548
     return true if status.exitstatus == 2 && @renderer.error_handling?
+    return true if status.exitstatus == 1
 
     false
   end
